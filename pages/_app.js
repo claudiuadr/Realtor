@@ -19,6 +19,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=e9e4cf0e-428d-4c26-b992-046032f5affd"> </script>
+
+
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css' integrity='sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==' crossOrigin='anonymous' referrerPolicy='no-referrer' />
       </Head>
       <ChakraProvider>
