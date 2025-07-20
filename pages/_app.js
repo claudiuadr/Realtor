@@ -29,6 +29,9 @@ function MyApp({ Component, pageProps }) {
         src="https://static.zdassets.com/ekr/snippet.js?key=e9e4cf0e-428d-4c26-b992-046032f5affd"
         strategy="afterInteractive"
       />
+
+      <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+<script type="text/javascript">window.Beacon('init', '7aa81b14-0fc8-4c0f-af10-c7848a050772')</script>
       
       <ChakraProvider>
         <Layout>
