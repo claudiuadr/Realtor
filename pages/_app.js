@@ -37,13 +37,31 @@ function MyApp({ Component, pageProps }) {
   {`window.Beacon('init', '7aa81b14-0fc8-4c0f-af10-c7848a050772');`}
 </Script>
 
-<script>
-	window.fwSettings={
-	'widget_id':206000000231
-	};
-	!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
-</script>
-<script type='text/javascript' src='https://euc-widget.freshworks.com/widgets/206000000231.js' async defer></script>
+
+<Script
+        id="freshworks-init"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.fwSettings = {
+              widget_id: 206000000231
+            };
+            !function(){
+              if (typeof window.FreshworksWidget !== "function") {
+                var n = function() {
+                  n.q.push(arguments);
+                };
+                n.q = [];
+                window.FreshworksWidget = n;
+              }
+            }();
+          `,
+        }}
+      />
+      <Script
+        src="https://euc-widget.freshworks.com/widgets/206000000231.js"
+        strategy="afterInteractive"
+      /> 
       
       <ChakraProvider>
         <Layout>
