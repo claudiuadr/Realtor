@@ -36,6 +36,14 @@ function MyApp({ Component, pageProps }) {
 <Script id="helpscout-beacon-init" strategy="afterInteractive">
   {`window.Beacon('init', '7aa81b14-0fc8-4c0f-af10-c7848a050772');`}
 </Script>
+
+<script>
+	window.fwSettings={
+	'widget_id':206000000231
+	};
+	!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
+</script>
+<script type='text/javascript' src='https://euc-widget.freshworks.com/widgets/206000000231.js' async defer></script>
       
       <ChakraProvider>
         <Layout>
