@@ -39,30 +39,33 @@ function MyApp({ Component, pageProps }) {
 
 
 <Script
-        id="freshworks-init"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.fwSettings = {
-              widget_id: 206000000231
-            };
-            !function(){
-              if (typeof window.FreshworksWidget !== "function") {
-                var n = function() {
-                  n.q.push(arguments);
-                };
-                n.q = [];
-                window.FreshworksWidget = n;
-              }
-            }();
-          `,
-        }}
-      />
-      <Script
-        src="https://euc-widget.freshworks.com/widgets/206000000231.js"
-        strategy="afterInteractive"
-      /> 
-      
+  id="freshworks-init"
+  strategy="beforeInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.fwSettings = {
+        widget_id: 206000000231
+      };
+      !function(){
+        if (typeof window.FreshworksWidget !== "function") {
+          var n = function() {
+            n.q.push(arguments);
+          };
+          n.q = [];
+          window.FreshworksWidget = n;
+        }
+      }();
+    `,
+  }}
+/>
+
+<Script
+  id="freshworks-widget"
+  src="https://widget.freshworks.com/widgets/206000000231.js"
+  strategy="beforeInteractive"
+/>
+
+
       <ChakraProvider>
         <Layout>
           <Component {...pageProps} />
